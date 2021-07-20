@@ -15,9 +15,11 @@ function setLocalStorage() {
             let newDiv = document.createElement('div');
             newDiv.classList.add('sub-box');
             var colour = colours[Math.floor(Math.random()*colours.length)];
-            if(!usedColours.includes(colour)){
-                usedColours.push(colour);
+            if(usedColours.includes(colour)){
                 colour = colours[Math.floor(Math.random()*colours.length)];
+            }
+            else {
+                usedColours.push(colour);
             }
             if(usedColours.length == colours.length){
                 usedColours = [];
