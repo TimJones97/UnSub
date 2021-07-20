@@ -59,7 +59,7 @@ function setTotal(){
     let newDiv = document.createElement('div');
     totalDiv.innerHTML = "";
     let htmlData = `
-        <p>Your total subscriptions cost $${total * 12} every year.</p>
+        <p>Your total subscriptions cost <b>$${total * 12}</b> every year.</p>
     `;
     newDiv.insertAdjacentHTML('afterbegin', htmlData);
     totalDiv.insertAdjacentElement('afterbegin', newDiv)
@@ -107,6 +107,7 @@ function onDelete(id) {
     arr = [...deleteArr];
     localStorage.setItem('subscriptionData', JSON.stringify(arr));
     setLocalStorage();
+    setTotal();
 }
 
 // edit

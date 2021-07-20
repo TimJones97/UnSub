@@ -29,7 +29,7 @@
         <form action="#" id="form">
           <input type="text" id="name" name="name" placeholder="Subscription name">
           <span>costs me $</span>
-          <input type="text" id="cost" name="cost" placeholder="0">
+          <input type="text" id="cost" name="cost" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" placeholder="0">
           <span>every</span>
           <select id="renewal" name="renewal">
             <option value="Monthly">month</option>
