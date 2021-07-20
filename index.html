@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="/files/img/general/favicon.ico"/>
+
+    <!-- Color for Chrome tabs (Android only) -->
+    <meta name="theme-color" content="#fff">
+
+    <script>document.write('<link rel="stylesheet" type="text/css" href="./files/css/style.css?v=' + Date.now() + '"\/>');</script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Poppins:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>
+
+    <title>UnSub</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>UnSub</h1>
+        <p>Find out how much your subscriptions are costing you.</p>
+      </header>
+      <div class="container">
+        <form action="#" id="form">
+          <input type="text" id="name" name="name" placeholder="Subscription name">
+          <span>costs me $</span>
+          <input type="text" id="cost" name="cost" placeholder="0">
+          <span>every</span>
+          <select id="renewal" name="renewal">
+            <option value="Monthly">month</option>
+            <option value="Weekly">week</option>
+            <option value="Yearly">year</option>
+            </option>
+          </select>
+          <div class="button-container">
+            <input type="submit" value="Add" id="submitBtn">
+          </div>
+          <input type="reset" id="reset">
+        </form>
+        <div id="show">
+          <!-- <h1>Your subscriptions will appear here</h1> -->
+        </div>
+        <div id="total">
+        </div>
+      </div>
+    </main>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script>
+      document.write('<script type="text/javascript" src="./files/js/script.js?v=' + Date.now() + '"\/><\/script>')
+    </script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+  </body>
+</html>
