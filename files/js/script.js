@@ -27,8 +27,19 @@ function setLocalStorage() {
             newDiv.style.background = colour;
             total += parseInt(subscription.cost);
 
+            var yearlyCost = 0;
+            if (subscription.renewal == "Weekly"){
+                yearlyCost = subscription.cost * 52;
+            }
+            if (subscription.renewal == "Monthly"){
+                yearlyCost = subscription.cost * 12;
+            }
+            if (subscription.renewal == "Yearly"){
+                yearlyCost = subscription.cost;
+            }
+            total += yearlyCost;
             let htmlData = `
-            <div>
+            <div data-yearly="${yearlyCost}">
                 <p><b>${subscription.name}</b></p>
                 <span class="renewal">${subscription.renewal}: $${subscription.cost}</span>
                 <div class="change-buttons">
@@ -61,7 +72,7 @@ function setTotal(){
     let newDiv = document.createElement('div');
     totalDiv.innerHTML = "";
     let htmlData = `
-        <p>Your total subscriptions cost <b>$${total * 12}</b> every year.</p>
+        <p>Your total subscriptions cost <b>$${total}</b> every year.</p>
     `;
     newDiv.insertAdjacentHTML('afterbegin', htmlData);
     totalDiv.insertAdjacentElement('afterbegin', newDiv)
