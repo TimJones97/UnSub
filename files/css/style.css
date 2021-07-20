@@ -133,6 +133,7 @@ select {
 #show {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	width: 100%;
 }
 /*SUBSCRIPTION BOX*/
@@ -140,7 +141,7 @@ select {
 	position: relative;
 	margin: 0 auto;
   flex-basis: 24%;
-  margin: 1%;
+  margin: 0.5%;
   border-radius: 7px;
   padding: 20px;
 	margin-bottom: 20px;
