@@ -119,10 +119,11 @@ function onEdit(id) {
     submitBtn.setAttribute('disabled', true)
 
     let editBtn = document.createElement('button');
+    editBtn.classList.add('saveBtn');
     let form = document.querySelector('#form');
     let btnEdit = document.querySelectorAll('#btnEdit');
 
-    editBtn.innerHTML = "save edit";
+    editBtn.innerHTML = "Save";
     btnEdit.forEach((element) => { element.setAttribute('disabled', true); })
     form.insertAdjacentElement('beforeend', editBtn)
 

@@ -119,15 +119,20 @@ select {
 .button-container {
 	flex-basis: 100%;
 }
-#submitBtn {
+#submitBtn,
+.saveBtn {
 	border: 1px solid #000;
 	border-radius: 50px;
+	background: none;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	width: 80px;
 	height: 35px;
 	margin: 30px auto;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
 }
 
 #show {
@@ -192,4 +197,21 @@ select {
 
 #total p {
 	text-align: center;
+}
+
+@media only screen and (max-width: 479px){
+	main {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    margin: 10px auto;
+	}
+	#form {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  #show {
+  	display: block;
+  }
 }
